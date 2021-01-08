@@ -6,6 +6,7 @@ var tbody = d3.select("tbody");
 
 console.log(tableData);
 
+// First Table
 tableData.forEach((ufoReport) => {
     var row = tbody.append("tr");
     Object.entries(ufoReport).forEach(([_, value]) => {
@@ -40,8 +41,10 @@ function runEnter() {
 
     console.log(filteredData);
 
+    // Clears out old table
     tbody.html("")
 
+    // New Table with filtered date
     filteredData.forEach((ufoReport) => {
         var row = tbody.append("tr");
         Object.entries(ufoReport).forEach(([_, value]) => {
